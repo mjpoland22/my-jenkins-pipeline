@@ -21,7 +21,7 @@ pipeline {
             steps {
                 script {
                     dir('kubernetes') {
-                        sh "sudo aws eks update-kubeconfig --name my-eks-cluster"
+                        sh "sudo aws eks update-kubeconfig --name wlab-eks-cluster"
                         sh "sudo kubectl apply -f nginx-deployment.yaml"
                         sh "sudo kubectl apply -f nginx-service.yaml"
                     }
